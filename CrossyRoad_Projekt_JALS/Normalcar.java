@@ -6,11 +6,15 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot und MouseInfo)
  * @author (Ihr Name) 
  * @version (eine Versionsnummer oder ein Datum)
  */
-public class Normalcar extends Actor
-{
+public class Normalcar extends Actor {
     private int chickenLives;
 
     public Normalcar() {
+        GreenfootImage image = new GreenfootImage("redcar.png");
+        image.scale(90, 50);
+        image.rotate(180);
+        setImage(image);
+        
         chickenLives = 1;
     }
 
@@ -21,7 +25,7 @@ public class Normalcar extends Actor
     public void lookForChicken() {
         if (isTouching(Chicken.class)) {
             removeTouching(Chicken.class);
-            chickenLives = chickenLives - 1;
+            chickenLives--;
 
             getWorld().showText("Erwischt! Sie haben noch " + chickenLives + " Leben!", 280, 280);
             if (chickenLives == 0) {
@@ -31,16 +35,18 @@ public class Normalcar extends Actor
                 Greenfoot.setWorld(new MyWorld());
                 getWorld().showText("", 280, 280);
             }
-
         }
     }
-    /**
-     * Act - tut, was auch immer Normalcar tun will. Diese Methode wird aufgerufen, 
-     * sobald der 'Act' oder 'Run' Button in der Umgebung angeklickt werden. 
-     */
-    public void act() 
-    {
+
+    public void act() {
+        turnAtEdge();
+        move(15);
         lookForChicken();
-        // Ergänzen Sie Ihren Quelltext hier...
     }    
+
+    public void turnAtEdge() {
+        if (isAtEdge()) {
+            turn(180);
+        }
+    }
 }
