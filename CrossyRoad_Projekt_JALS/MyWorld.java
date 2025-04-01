@@ -1,35 +1,27 @@
-import greenfoot.*;
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
+/**
+ * Ergänzen Sie hier eine Beschreibung für die Klasse MyWorld.
+ * 
+ * @author (Ihr Name) 
+ * @version (eine Versionsnummer oder ein Datum)
+ */
 public class MyWorld extends World
 {
     private Timer timer;
-    private ScoreCounter scoreCounter;
 
+    /**
+     * Konstruktor für Objekte der Klasse MyWorld
+     */
     public MyWorld()
     {    
+        // Erstellt eine neue Welt mit 1280x720 Zellen und einer Zell-Größe von 1x1 Pixeln.
         super(1280, 720, 1); 
 
-        // Timer anzeigen
+        // Timer erstellen und zur Welt hinzufügen
         timer = new Timer();
-        addObject(timer, 100, 50);
+        addObject(timer, 100, 50);  // Position: x=100, y=50
         
-        // ScoreCounter unter dem Timer
-        scoreCounter = new ScoreCounter();
-        addObject(scoreCounter, 100, 90);
-
-        // 5 Coins zu Beginn spawnen
-        for (int i = 0; i < 5; i++) {
-            spawnCoin();
-        }
-    }
-
-    public void spawnCoin() {
-        int x = Greenfoot.getRandomNumber(getWidth());
-        int y = Greenfoot.getRandomNumber(getHeight());
-        addObject(new Coin(), x, y);
-    }
-    
-        public void addScore(int points) {
-        scoreCounter.addScore(points);
+        this.addObject(new Normalcar(), 15, 534);
     }
 }
