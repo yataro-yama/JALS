@@ -39,7 +39,7 @@ public class Ambulance extends Actor {
      * sobald der 'Act' oder 'Run' Button in der Umgebung angeklickt werden.
      */
     public void act() {
-       lookForChicken();
-       getWorld().showText("Erwischt! Sie haben noch " + chickenLives + " Leben!", 280, 280); // Ergänzen Sie Ihren Quelltext hier...
+        lookForChicken();
+        // Ergänzen Sie Ihren Quelltext hier...
     }
 }
