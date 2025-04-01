@@ -8,6 +8,13 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot und MouseInfo)
  */
 public class Normalcar extends Actor
 {
+    public Normalcar()
+    {
+        GreenfootImage image = new GreenfootImage("redcar.png");
+        image.scale(90, 50);
+        image.rotate(180);
+        setImage (image);
+    }
     /**
      * Act - tut, was auch immer Normalcar tun will. Diese Methode wird aufgerufen, 
      * sobald der 'Act' oder 'Run' Button in der Umgebung angeklickt werden. 
@@ -15,13 +22,13 @@ public class Normalcar extends Actor
     public void act() 
     {
         turnAtEdge();
-        move(50);
+        move(15);
     }    
         public void turnAtEdge()
     {
         if(isAtEdge())
         {
-            turn(90);
+            turn(180);
         }
     }
 }
