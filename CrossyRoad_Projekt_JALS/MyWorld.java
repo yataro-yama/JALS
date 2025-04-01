@@ -21,5 +21,7 @@ public class MyWorld extends World
         // Timer erstellen und zur Welt hinzufügen
         timer = new Timer();
         addObject(timer, 100, 50);  // Position: x=100, y=50
+        
+        this.addObject(new Normalcar(), 15, 534);
     }
 }

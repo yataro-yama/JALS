@@ -14,6 +14,15 @@ public class Normalcar extends Actor
      */
     public void act() 
     {
-        // Ergänzen Sie Ihren Quelltext hier...
+        turnAtEdge();
+        move(50);
     }    
+        public void turnAtEdge()
+    {
+        if(isAtEdge())
+        {
+            turn(90);
+        }
+    }
 }
+    
