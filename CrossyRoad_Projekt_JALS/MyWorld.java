@@ -8,7 +8,14 @@ public class MyWorld extends World
     public MyWorld()
     {    
         super(1280, 720, 1); 
+        
+        // Auto 
+        this.addObject(new Normalcar(), 15, 534);
 
+        // Chicken
+        this.addObject(new Chicken(), 606, 656);
+
+        
         // Timer anzeigen
         timer = new Timer();
         addObject(timer, 100, 50);
