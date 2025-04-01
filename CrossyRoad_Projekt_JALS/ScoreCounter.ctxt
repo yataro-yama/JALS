@@ -1,9 +1,0 @@
-#BlueJ class context
-comment0.target=ScoreCounter
-comment1.params=
-comment1.target=ScoreCounter()
-comment2.params=amount
-comment2.target=void\ addScore(int)
-comment3.params=
-comment3.target=void\ updateImage()
-numComments=4
