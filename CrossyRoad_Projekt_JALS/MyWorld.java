@@ -9,8 +9,9 @@ public class MyWorld extends World
     {    
         super(1280, 720, 1); 
         
-        // Auto 
+        // Autos 
         this.addObject(new Normalcar(), 15, 534);
+        this.addObject(new Policecar(),1258,595);
 
         // Chicken
         this.addObject(new Chicken(), 606, 656);

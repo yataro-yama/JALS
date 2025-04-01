@@ -11,6 +11,10 @@ public class Policecar extends Actor
     private int chickenLives;
 
     public Policecar() {
+        GreenfootImage image = new GreenfootImage("blue-car.png");
+        image.scale(90, 50);
+        //image.rotate(90);
+        setImage(image);
         chickenLives = 1;
     }
 
@@ -40,7 +44,14 @@ public class Policecar extends Actor
      */
     public void act() 
     {
+        turnAtEdge();
+        move(-5);
         lookForChicken();
         // Ergänzen Sie Ihren Quelltext hier...
     }    
+    public void turnAtEdge() {
+        if (isAtEdge()) {
+            turn(180);
+        }
+    }
 }
