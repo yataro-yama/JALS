@@ -40,6 +40,6 @@ public class Ambulance extends Actor {
      */
     public void act() {
        lookForChicken();
-       getWorld().showText("Erwischt! Sie haben noch " + chickenLives + " Leben!", 280, 280); // Ergänzen Sie Ihren Quelltext hier...
+       // Ergänzen Sie Ihren Quelltext hier...
     }
 }
