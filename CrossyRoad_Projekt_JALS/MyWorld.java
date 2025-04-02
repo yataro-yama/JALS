@@ -9,11 +9,13 @@ public class MyWorld extends World
     {    
         super(1280, 720, 1); 
         
-        // Autos 
+        // Autos von Beginn an platzieren
         this.addObject(new Normalcar(), 15, 534);
         this.addObject(new Policecar(),1258,595);
+        this.addObject(new Ambulance(),3,395);
+        this.addObject(new Traktor(), 10,205);
 
-        // Chicken
+        // Chicken von Beginn an platzieren
         this.addObject(new Chicken(), 606, 656);
 
         
@@ -40,4 +42,5 @@ public class MyWorld extends World
         public void addScore(int points) {
         scoreCounter.addScore(points);
     }
-}
+    }
+
