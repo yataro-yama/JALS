@@ -46,7 +46,8 @@ public class Normalcar extends Actor {
 
     public void turnAtEdge() {
         if (isAtEdge()) {
-            turn(180);
+           // turn(180);
+           setLocation(0,534);
         }
     }
 }

@@ -11,6 +11,14 @@ public class Traktor extends Actor
     private int chickenLives;
 
     public Traktor() {
+
+
+        GreenfootImage image = new GreenfootImage("tractor.png");
+        image.scale(90, 50);
+        image.rotate(180);
+        setImage(image);
+        
+        
         chickenLives = 1;
     }
 
@@ -42,6 +50,15 @@ public class Traktor extends Actor
     public void act() 
     {
         lookForChicken();
+        turnAtEdge();
+        move(1);
+
         // Ergänzen Sie Ihren Quelltext hier...
     }    
+    public void turnAtEdge() {
+        if (isAtEdge()) {
+            //turn(180);
+            setLocation(0,205);
+        }
+    }
 }

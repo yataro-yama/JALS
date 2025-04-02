@@ -10,6 +10,13 @@ public class Ambulance extends Actor {
     private int chickenLives;
 
     public Ambulance() {
+
+        GreenfootImage image = new GreenfootImage("ambulance.png");
+        image.scale(90, 50);
+        image.rotate(180);
+        setImage(image);
+        
+        
         chickenLives = 1;
     }
 
@@ -33,6 +40,12 @@ public class Ambulance extends Actor {
 
         }
     }
+    public void turnAtEdge() {
+        if (isAtEdge()) {
+            //turn(180);
+            setLocation(0,395);
+        }
+    }
 
     /**
      * Act - tut, was auch immer Ambulance tun will. Diese Methode wird aufgerufen,
@@ -40,6 +53,8 @@ public class Ambulance extends Actor {
      */
     public void act() {
         lookForChicken();
+        turnAtEdge();
+        move(10);
         // Ergänzen Sie Ihren Quelltext hier...
     }
 }
