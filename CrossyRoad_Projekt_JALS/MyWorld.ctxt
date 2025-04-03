@@ -6,4 +6,6 @@ comment2.params=
 comment2.target=void\ spawnCoin()
 comment3.params=points
 comment3.target=void\ addScore(int)
-numComments=4
+comment4.params=
+comment4.target=void\ act()
+numComments=5
