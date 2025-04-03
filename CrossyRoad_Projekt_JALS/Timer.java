@@ -1,5 +1,5 @@
-import java.awt.Color;
-
+//import java.awt.Color;
+import greenfoot.Color;
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 public class Timer extends Actor
