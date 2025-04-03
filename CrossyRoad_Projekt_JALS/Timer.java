@@ -1,3 +1,5 @@
+import java.awt.Color;
+
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 public class Timer extends Actor
@@ -17,7 +19,7 @@ public class Timer extends Actor
     }
 
     private void updateImage(int seconds) {
-        GreenfootImage image = new GreenfootImage("Time: " + seconds + "s", 24, Color.WHITE, new Color(0,0,0,0));
+        GreenfootImage image = new GreenfootImage("Time: " + seconds + "s", 24, Color.BLACK, new Color(0,0,0,0));
         setImage(image);
     }
 
