@@ -1,3 +1,5 @@
+import java.awt.Color;
+
 import greenfoot.*;
 
 public class ScoreCounter extends Actor
@@ -14,6 +16,6 @@ public class ScoreCounter extends Actor
     }
 
     private void updateImage() {
-        setImage(new GreenfootImage("Score: " + score, 24, Color.YELLOW, new Color(0, 0, 0, 0)));
+        setImage(new GreenfootImage("Score: " + score, 24, Color.BLACK, new Color(0, 0, 0, 0)));
     }
 }
