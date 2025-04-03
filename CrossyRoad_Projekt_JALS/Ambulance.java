@@ -6,39 +6,14 @@ import greenfoot.*; // (World, Actor, GreenfootImage, Greenfoot und MouseInfo)
  * @author (Ihr Name)
  * @version (eine Versionsnummer oder ein Datum)
  */
-public class Ambulance extends Actor {
-    private int chickenLives;
-
+public class Ambulance extends Autos {
     public Ambulance() {
 
         GreenfootImage image = new GreenfootImage("ambulance.png");
         image.scale(90, 50);
         image.rotate(180);
         setImage(image);
-        
-        
         chickenLives = 1;
-    }
-
-    public void setChickenLives(int newChickenLives) {
-        chickenLives = newChickenLives;
-    }
-
-    public void lookForChicken() {
-        if (isTouching(Chicken.class)) {
-            removeTouching(Chicken.class);
-            chickenLives = chickenLives - 1;
-
-            getWorld().showText("Erwischt! Sie haben noch " + chickenLives + " Leben!", 280, 280);
-            if (chickenLives == 0) {
-                getWorld().showText("Game Over!", 280, 280);
-                Greenfoot.delay(300);
-                Greenfoot.stop();
-                Greenfoot.setWorld(new MyWorld());
-                getWorld().showText("", 280, 280);
-            }
-
-        }
     }
     public void turnAtEdge() {
         if (isAtEdge()) {
@@ -46,7 +21,6 @@ public class Ambulance extends Actor {
             setLocation(0,395);
         }
     }
-
     /**
      * Act - tut, was auch immer Ambulance tun will. Diese Methode wird aufgerufen,
      * sobald der 'Act' oder 'Run' Button in der Umgebung angeklickt werden.
@@ -55,6 +29,7 @@ public class Ambulance extends Actor {
         lookForChicken();
         turnAtEdge();
         move(10);
+        setChickenLives(1);
         // Ergänzen Sie Ihren Quelltext hier...
     }
 }
