@@ -4,7 +4,9 @@ public class MyWorld extends World
 {
     private Timer timer;
     private ScoreCounter scoreCounter;
-
+    private int timertrain = 0;
+    private boolean trainAdded = false;
+    private boolean wagonAdded = false;
     public MyWorld()
     {    
         super(1280, 720, 1); 
@@ -18,7 +20,9 @@ public class MyWorld extends World
         // Chicken von Beginn an platzieren
         this.addObject(new Chicken(), 606, 656);
 
-        
+        // Zug mit Wagon 
+        /*this.addObject(new Train(),0,270);
+        this.addObject(new Wagon(), -10, 270);*/
         // Timer anzeigen
         timer = new Timer();
         addObject(timer, 100, 50);
@@ -41,6 +45,23 @@ public class MyWorld extends World
     
         public void addScore(int points) {
         scoreCounter.addScore(points);
+    }
+    public void act() {
+        if (!trainAdded) {
+            this.addObject(new Train(), 0, 270);
+            trainAdded = true;
+            timertrain = 0; // Timer zurücksetzen
+        }
+
+        // Warte ca. 100 Acts (~2 Sekunden) bevor der Wagon erscheint
+        if (trainAdded && !wagonAdded) {
+            timertrain++;
+
+            if (timertrain >= 100) { // 100 Acts ≈ 2 Sekunden
+                this.addObject(new Wagon(), 0, 270);
+                wagonAdded = true; // Damit es nur einmal passiert
+            }
+        }
     }
     }
 
