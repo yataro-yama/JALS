@@ -1,54 +1,50 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot und MouseInfo)
 
-/**
- * Ergänzen Sie hier eine Beschreibung für die Klasse Chicken.
- * 
- * @author (Ihr Name) 
- * @version (eine Versionsnummer oder ein Datum)
- */
 public class Chicken extends Actor
 {
+    private GreenfootImage originalImage;
+
     public Chicken() {
-
-        GreenfootImage image = new GreenfootImage("chicken_new.png");
-        image.scale(40, 40);
-        //image.rotate(180);
-        setImage(image);
-    }
-    /**
-     * Act - tut, was auch immer Chicken tun will. Diese Methode wird aufgerufen, 
-     * sobald der 'Act' oder 'Run' Button in der Umgebung angeklickt werden. 
-     */
-
-     public void checkKeyPress()
-     {
-    if(Greenfoot.isKeyDown("a"))
-    {
-        setLocation(getX()-20, getY());
-        sleepFor(10);
+        originalImage = new GreenfootImage("chicken_new.png");
+        originalImage.scale(40, 40);
+        setImage(originalImage);
     }
 
-    if(Greenfoot.isKeyDown("d"))
+    public void checkKeyPress()
     {
-        setLocation(getX()+20, getY());
-        sleepFor(10);
-    }
-   
-    if (Greenfoot.isKeyDown("w"))
-    {
-        setLocation(getX(), getY()-20);
-        sleepFor(10);
-    }
+        if(Greenfoot.isKeyDown("a"))
+        {
+            GreenfootImage flipped = new GreenfootImage(originalImage);
+            flipped.mirrorHorizontally(); // always flip left
+            setImage(flipped);
+
+            setLocation(getX() - 20, getY());
+            sleepFor(10);
+        }
+
+        if(Greenfoot.isKeyDown("d"))
+        {
+            setImage(new GreenfootImage(originalImage)); // Original zurücksetzen
+            setLocation(getX()+20, getY());
+            sleepFor(10);
+        }
+
+        if (Greenfoot.isKeyDown("w"))
+        {
+            setLocation(getX(), getY()-20);
+            sleepFor(10);
+        }
+
         if (Greenfoot.isKeyDown("s"))
-    {
-        setLocation(getX(), getY()+20);
-        sleepFor(10);
+        {
+            setLocation(getX(), getY()+20);
+            sleepFor(10);
+        }
     }
-     }
 
     public void act() 
     {
         checkKeyPress();
-        // Ergänzen Sie Ihren Quelltext hier...
-    }    
+    }
+
 }
