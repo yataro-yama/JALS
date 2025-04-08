@@ -11,7 +11,7 @@ public class Chicken extends Actor
     public Chicken() {
 
         GreenfootImage image = new GreenfootImage("chicken_new.png");
-        image.scale(50, 35);
+        image.scale(40, 40);
         //image.rotate(180);
         setImage(image);
     }
