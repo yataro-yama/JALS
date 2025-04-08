@@ -80,5 +80,11 @@ public class MyWorld extends World
             }
         }
     }
+    
+    public Timer getTimer() {
+    return timer;
 }
+
+}
+
 
