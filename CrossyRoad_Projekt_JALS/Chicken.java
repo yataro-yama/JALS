@@ -24,21 +24,25 @@ public class Chicken extends Actor
      {
     if(Greenfoot.isKeyDown("left"))
     {
-        setLocation(getX()-2, getY());
+        setLocation(getX()-20, getY());
+        sleepFor(10);
     }
 
     if(Greenfoot.isKeyDown("right"))
     {
-        setLocation(getX()+2, getY());
+        setLocation(getX()+20, getY());
+        sleepFor(10);
     }
    
     if (Greenfoot.isKeyDown("up"))
     {
-        setLocation(getX(), getY()-2);
+        setLocation(getX(), getY()-20);
+        sleepFor(10);
     }
         if (Greenfoot.isKeyDown("down"))
     {
-        setLocation(getX(), getY()+2);
+        setLocation(getX(), getY()+20);
+        sleepFor(10);
     }
      }
 
