@@ -1,6 +1,5 @@
 #BlueJ class context
 comment0.target=TrainandWagon
-comment0.text=\r\n\ Klasse\ TrainandWagon,\ die\ sich\ \u00FCber\ die\ Welt\ bewegt\ und\ das\ Chicken\ erkennt.\r\n\ \r\n\ @author\ (Ihr\ Name)\ \r\n\ @version\ (eine\ Versionsnummer\ oder\ ein\ Datum)\r\n
 comment1.params=
 comment1.target=void\ act()
 comment2.params=

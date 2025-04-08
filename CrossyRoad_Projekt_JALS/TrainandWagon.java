@@ -1,19 +1,13 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot und MouseInfo)
 
-/**
- * Klasse TrainandWagon, die sich über die Welt bewegt und das Chicken erkennt.
- * 
- * @author (Ihr Name) 
- * @version (eine Versionsnummer oder ein Datum)
- */
 public class TrainandWagon extends Actor
 {
-    public int chickenLives;
-    protected static int ChickenLives = 1; 
-    
+    public int chickenLives = 1;
+
     public void act() 
     {
-        
+        turnAtEdge();
+        lookForChicken();
     }    
     
     public void turnAtEdge() {
@@ -28,10 +22,13 @@ public class TrainandWagon extends Actor
             chickenLives--;
 
             if (chickenLives <= 0) {
-                GreenfootImage gameOverImage = new GreenfootImage("Game Over!", 60, Color.RED, new Color(0,0,0,0));
-                Actor gameOverText = new Actor() {}; // Leerer Actor für den Text
+                Greenfoot.playSound("game_over.mp3"); // 🔊 Game Over Sound
+
+                GreenfootImage gameOverImage = new GreenfootImage("Game Over!", 60, Color.RED, new Color(0, 0, 0, 0));
+                Actor gameOverText = new Actor() {};
                 gameOverText.setImage(gameOverImage);
                 getWorld().addObject(gameOverText, getWorld().getWidth() / 2, getWorld().getHeight() / 2);
+
                 Greenfoot.delay(300);
                 Greenfoot.stop();
                 Greenfoot.setWorld(new MyWorld());
@@ -41,6 +38,6 @@ public class TrainandWagon extends Actor
     }
 
     public void setChickenLives(int newChickenLives) {
-        ChickenLives = newChickenLives;
+        chickenLives = newChickenLives;
     }
 }
