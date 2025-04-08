@@ -20,6 +20,7 @@ public class Train extends TrainandWagon
     public void act() 
     {
         move(2);
-        turnAtEdge();// Ergänzen Sie Ihren Quelltext hier...
+        turnAtEdge();
+        lookForChicken();
     }    
 }

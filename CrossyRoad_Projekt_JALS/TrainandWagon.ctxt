@@ -1,9 +1,12 @@
 #BlueJ class context
 comment0.target=TrainandWagon
-comment0.text=\r\n\ Erg\u00E4nzen\ Sie\ hier\ eine\ Beschreibung\ f\u00FCr\ die\ Klasse\ TrainandWagon.\r\n\ \r\n\ @author\ (Ihr\ Name)\ \r\n\ @version\ (eine\ Versionsnummer\ oder\ ein\ Datum)\r\n
+comment0.text=\r\n\ Klasse\ TrainandWagon,\ die\ sich\ \u00FCber\ die\ Welt\ bewegt\ und\ das\ Chicken\ erkennt.\r\n\ \r\n\ @author\ (Ihr\ Name)\ \r\n\ @version\ (eine\ Versionsnummer\ oder\ ein\ Datum)\r\n
 comment1.params=
 comment1.target=void\ act()
-comment1.text=\r\n\ Act\ -\ tut,\ was\ auch\ immer\ TrainandWagon\ tun\ will.\ Diese\ Methode\ wird\ aufgerufen,\ \r\n\ sobald\ der\ 'Act'\ oder\ 'Run'\ Button\ in\ der\ Umgebung\ angeklickt\ werden.\ \r\n
 comment2.params=
 comment2.target=void\ turnAtEdge()
-numComments=3
+comment3.params=
+comment3.target=void\ lookForChicken()
+comment4.params=newChickenLives
+comment4.target=void\ setChickenLives(int)
+numComments=5
