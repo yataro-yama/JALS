@@ -1,4 +1,4 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot und MouseInfo)
+import greenfoot.*;
 
 public class Autos extends Actor
 {
@@ -9,13 +9,15 @@ public class Autos extends Actor
     {
         lookForChicken();
     }    
-
-    public void lookForChicken() {
-        if (isTouching(Chicken.class)) {
+    public void lookForChicken() 
+    {
+        if (isTouching(Chicken.class)) 
+        {
             removeTouching(Chicken.class);
             chickenLives--;
 
-            if (chickenLives <= 0) {
+            if (chickenLives <= 0) 
+            {
                 Greenfoot.playSound("game_over.mp3"); // 🔊 Game Over Sound
 
                 GreenfootImage gameOverImage = new GreenfootImage("Game Over!", 60, Color.RED, new Color(0,0,0,0));
@@ -30,8 +32,8 @@ public class Autos extends Actor
             }
         }
     }
-
-    public void setChickenLives(int newChickenLives) {
+    public void setChickenLives(int newChickenLives) 
+    {
         ChickenLives = newChickenLives;
     }
 }

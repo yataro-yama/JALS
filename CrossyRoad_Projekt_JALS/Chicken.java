@@ -1,15 +1,15 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot und MouseInfo)
+import greenfoot.*;
 
 public class Chicken extends Actor
 {
     private GreenfootImage originalImage;
 
-    public Chicken() {
+    public Chicken() 
+    {
         originalImage = new GreenfootImage("chicken_new.png");
         originalImage.scale(40, 40);
         setImage(originalImage);
     }
-
     public void checkKeyPress()
     {
         if(Greenfoot.isKeyDown("a"))
@@ -21,14 +21,12 @@ public class Chicken extends Actor
             setLocation(getX() - 20, getY());
             sleepFor(10);
         }
-
         if(Greenfoot.isKeyDown("d"))
         {
             setImage(new GreenfootImage(originalImage)); // Original zurücksetzen
             setLocation(getX()+20, getY());
             sleepFor(10);
         }
-
         if (Greenfoot.isKeyDown("w"))
         {
             setLocation(getX(), getY()-20);
@@ -41,10 +39,8 @@ public class Chicken extends Actor
             sleepFor(10);
         }
     }
-
     public void act() 
     {
         checkKeyPress();
     }
-
 }
