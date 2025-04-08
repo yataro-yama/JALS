@@ -18,7 +18,7 @@ public class TrainandWagon extends Actor
     
     public void turnAtEdge() {
         if (isAtEdge()) {
-            setLocation(0, 265);
+            setLocation(0, 275);
         }
     }
 
