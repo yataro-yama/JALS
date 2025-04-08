@@ -10,7 +10,7 @@ public class Wagon extends TrainandWagon
 {
         public Wagon() {
         GreenfootImage image = new GreenfootImage("wagon.png");
-        image.scale(250, 200);
+        image.scale(350, 90);
         setImage(image);
     }
     /**
