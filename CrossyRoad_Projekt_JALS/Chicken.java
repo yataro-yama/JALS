@@ -22,24 +22,24 @@ public class Chicken extends Actor
 
      public void checkKeyPress()
      {
-    if(Greenfoot.isKeyDown("left"))
+    if(Greenfoot.isKeyDown("a"))
     {
         setLocation(getX()-20, getY());
         sleepFor(10);
     }
 
-    if(Greenfoot.isKeyDown("right"))
+    if(Greenfoot.isKeyDown("d"))
     {
         setLocation(getX()+20, getY());
         sleepFor(10);
     }
    
-    if (Greenfoot.isKeyDown("up"))
+    if (Greenfoot.isKeyDown("w"))
     {
         setLocation(getX(), getY()-20);
         sleepFor(10);
     }
-        if (Greenfoot.isKeyDown("down"))
+        if (Greenfoot.isKeyDown("s"))
     {
         setLocation(getX(), getY()+20);
         sleepFor(10);
