@@ -24,7 +24,6 @@ public class Coinbasket extends Actor
                 int coinsToDeduct = world.getCollectedCoins();
                 
                 if (coinsToDeduct > 0) { // Nur abziehen, wenn Coins vorhanden sind
-                    world.addScore(-coinsToDeduct);
                     getWorld().showText("Du hast " + coinsToDeduct + " Münzen abgegeben!", 700, 30);
                     world.resetCollectedCoins();
 
