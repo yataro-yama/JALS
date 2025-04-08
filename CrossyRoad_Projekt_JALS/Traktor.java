@@ -24,7 +24,7 @@ public class Traktor extends Autos
     {
         lookForChicken();
         turnAtEdge();
-        move(2);
+        move(1);
         setChickenLives(1);
         // Ergänzen Sie Ihren Quelltext hier...
     }    
