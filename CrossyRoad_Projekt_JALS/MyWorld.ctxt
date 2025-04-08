@@ -12,4 +12,6 @@ comment5.params=
 comment5.target=void\ resetCollectedCoins()
 comment6.params=
 comment6.target=void\ act()
-numComments=7
+comment7.params=
+comment7.target=Timer\ getTimer()
+numComments=8

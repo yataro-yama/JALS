@@ -24,13 +24,15 @@ public class Autos extends Actor
             removeTouching(Chicken.class);
             chickenLives = chickenLives - 1;
 
-            getWorld().showText("Erwischt! Sie haben noch " + chickenLives + " Leben!", 280, 280);
             if (chickenLives == 0) {
-                getWorld().showText("Game Over!", 280, 280);
+                GreenfootImage gameOverImage = new GreenfootImage("Game Over!", 60, Color.RED, new Color(0,0,0,0));
+                Actor gameOverText = new Actor() {}; // Leerer Actor für Text
+                gameOverText.setImage(gameOverImage);
+                getWorld().addObject(gameOverText, getWorld().getWidth() / 2, getWorld().getHeight() / 2);
                 Greenfoot.delay(300);
                 Greenfoot.stop();
                 Greenfoot.setWorld(new MyWorld());
-                getWorld().showText("", 280, 280);
+                getWorld().showText("", 600, 300);
             }
 
         }

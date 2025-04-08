@@ -1,11 +1,11 @@
 #BlueJ class context
 comment0.target=Coinbasket
-comment0.text=\r\n\ Erg\u00E4nzen\ Sie\ hier\ eine\ Beschreibung\ f\u00FCr\ die\ Klasse\ Coinbasket.\r\n\ \r\n\ @author\ (Ihr\ Name)\ \r\n\ @version\ (eine\ Versionsnummer\ oder\ ein\ Datum)\r\n
 comment1.params=
 comment1.target=Coinbasket()
 comment2.params=
 comment2.target=void\ act()
-comment2.text=\r\n\ Act\ -\ tut,\ was\ auch\ immer\ Coinbasket\ tun\ will.\ Diese\ Methode\ wird\ aufgerufen,\ \r\n\ sobald\ der\ 'Act'\ oder\ 'Run'\ Button\ in\ der\ Umgebung\ angeklickt\ werden.\ \r\n
 comment3.params=
 comment3.target=void\ CoinAbgabe()
-numComments=4
+comment4.params=
+comment4.target=void\ checkTextClear()
+numComments=5

@@ -1,11 +1,10 @@
-//import java.awt.Color;
 import greenfoot.Color;
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 public class Timer extends Actor
 {
     private long startTime;
-    
+
     public Timer() {
         startTime = System.currentTimeMillis();
         updateImage(0);
@@ -25,5 +24,11 @@ public class Timer extends Actor
 
     public void reset() {
         startTime = System.currentTimeMillis();
+    }
+
+    // ✅ Neu hinzugefügt: Gibt die vergangenen Sekunden zurück
+    public int getElapsedSeconds() {
+        long currentTime = System.currentTimeMillis();
+        return (int)((currentTime - startTime) / 1000);
     }
 }
